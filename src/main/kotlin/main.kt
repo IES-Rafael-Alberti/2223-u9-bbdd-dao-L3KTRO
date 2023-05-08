@@ -14,7 +14,7 @@ fun main(args: Array<String>) {
  *
  * @param participaciones
  * @return devuelve un mutableMapOf<Int, Pair<Int, Ctf>> donde
- *      Key: el grupoId del grupo
+ *      Key: el grupoId del grupo test
  *      Pair:
  *          first: Mejor posición
  *          second: Objeto CTF el que mejor ha quedado

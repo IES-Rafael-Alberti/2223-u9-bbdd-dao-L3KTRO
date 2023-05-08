@@ -1,18 +1,23 @@
-package entities
+package db
 
-import javax.sql.DataSource
+import java.sql.Connection
+import java.sql.DriverManager
 
-object Driver {
+object Handler {
+
+    private fun link(): Connection {
+        return DriverManager.getConnection("jdbc:h2:./db", "lolo", "escobar")
+    }
 
     private fun sizeProps(sql: String): Int {
         return sql.split("?").size - 1
     }
 
-    fun modify(db: DataSource, sql: String, props: List<Int>): Int? {
+    fun query(sql: String, props: List<Int>): Int {
         if (sizeProps(sql) < props.size) {
-            return null
+            return 0
         }
-        return db.connection.use { conn ->
+        return link().use { conn ->
             conn.prepareStatement(sql).use { stmt ->
                 props.forEachIndexed { index, it ->
                     stmt.setString(index+1, it.toString())

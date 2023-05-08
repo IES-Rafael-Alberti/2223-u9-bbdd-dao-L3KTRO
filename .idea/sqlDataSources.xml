@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DdlMappings">
+    <mapping uuid="97cd9b20-030c-4c28-9bf8-9923d8fcae97" name="DDL">
+      <data-sources db="fb784266-b4e0-4612-b531-b71710b5d90f" ddl="a8cbeb7e-0baf-4b6f-bf77-ad543d961317" />
+      <scope>
+        <node negative="1">
+          <node kind="database" negative="1" />
+          <node kind="database">
+            <name qname="DB" />
+            <name qname="DEFAULT" />
+            <node kind="schema" negative="1" />
+          </node>
+        </node>
+      </scope>
+    </mapping>
+  </component>
+  <component name="SqlDataSourceStorage">
+    <option name="dataSources">
+      <list>
+        <State>
+          <option name="id" value="a8cbeb7e-0baf-4b6f-bf77-ad543d961317" />
+          <option name="name" value="console-un9pe (DDL)" />
+          <option name="dbmsName" value="H2" />
+          <option name="urls">
+            <array>
+              <option value="file://$PROJECT_DIR$/src/main/kotlin/db/dll/schema.sql" />
+            </array>
+          </option>
+          <option name="outLayout" value="File per object by schema.groovy" />
+        </State>
+      </list>
+    </option>
+  </component>
+</project>

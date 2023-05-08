@@ -1,12 +1,12 @@
 package entities.manager
 
-import entities.Entity
+import javax.sql.DataSource
 import entities.data.CTF as Data
 
 
-class CTF(id: Int, groupId: Int, points: Int) : Data(id, groupId, points) {
+class CTF(private val db: DataSource, id: Int, groupId: Int, points: Int) : Data(id, groupId, points) {
     override fun create() {
-        TODO("Not yet implemented")
+        val sql = "INSERT INTO CTFS (CTFID, GRUPOID, PUNTUACION) VALUES (?, ?, ?)"
     }
 
     override fun select(id: Int) {
